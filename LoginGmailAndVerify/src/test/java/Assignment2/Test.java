@@ -22,7 +22,7 @@ public class Test extends BaseClass{
     }
 
 
-    @BeforeMethod
+    @org.testng.annotations.Test
     public void loginToGmail() throws IOException, InvalidFormatException, InterruptedException {
         login.EnterEmail(UtilityClass.getTD(0,0));
         login.ClickOnNext1();
@@ -33,11 +33,11 @@ public class Test extends BaseClass{
         compose.EnterTo(UtilityClass.getTD(0,2));
         compose.messageSubject(UtilityClass.getTD(0,3));
         compose.messageBody(UtilityClass.getTD(0,4));
-        compose.clickOnButtons();
 
-        @org.testng.annotations.Test
-        public void pass()
-        {System.out.println("aditya");}
+
+
+
+
 
     }
 

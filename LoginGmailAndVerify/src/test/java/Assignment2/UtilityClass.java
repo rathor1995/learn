@@ -15,7 +15,7 @@ import java.io.IOException;
 public class UtilityClass {
     public static String getTD(int rowIndex,int colIndex) throws IOException, InvalidFormatException
     {
-        FileInputStream file = new FileInputStream("/home/knoldus/Downloads/adi01.xlsx");
+        FileInputStream file = new FileInputStream("/home/knoldus/IdeaProjects/LoginGmailAndVerify/src/test/adi01.xlsx");
         Sheet sh = WorkbookFactory.create(file).getSheet("Sheet1");
         String value = sh.getRow(rowIndex).getCell(colIndex).getStringCellValue();
         return value;

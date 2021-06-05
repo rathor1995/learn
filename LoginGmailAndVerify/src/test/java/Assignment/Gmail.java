@@ -29,13 +29,6 @@ public class Gmail {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.get("https://accounts.google.com/");
 
-        //XSSFWorkbook workbook = new XSSFWorkbook(new FileInputStream(new File("/home/knoldus/Documents/aditya.xlsx)));
-        //XSSFSheet sheet = workbook.getSheet("Sheet1")
-
-       // File xlsxFile = new File( "/home/knoldus/Documents/aditya.xlsx" );
-        //FileInputStream finXLSX = new FileInputStream( xlsxFile ); //line1
-        //FileOutputStream foutXLSX = new FileOutputStream( xlsxFile ); //line2
-        //XSSFWorkbook workSheet = new XSSFWorkbook( finXLSX ); //line3
 
       FileInputStream file = new FileInputStream("/home/knoldus/Downloads/adi01.xlsx");
        Sheet sh = WorkbookFactory.create(file).getSheet("Sheet1");
@@ -43,8 +36,10 @@ public class Gmail {
         driver.findElement(By.xpath("//input[@type='email']")).sendKeys(sh.getRow(0).getCell(0).getStringCellValue());
         driver.findElement(By.xpath("//span[@jsname='V67aGc']")).click();
 
-       // driver.findElement(By.xpath("//input[@type='password']")).sendKeys(sh.getRow(0).getCell(1).getStringCellValue());
-       // driver.findElement(By.xpath("//div[@class='VfPpkd-RLmnJb']")).click();
+       driver.findElement(By.xpath("//input[@type='password']")).sendKeys(sh.getRow(0).getCell(1).getStringCellValue());
+       driver.findElement(By.xpath("//div[@class='VfPpkd-RLmnJb']")).click();
+
+
 
 
 
